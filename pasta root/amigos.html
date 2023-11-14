@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVI REGISTER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .settings-button,
+        .search-button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 500px;
+            cursor: pointer;
+            margin-left: 10px; /* Ajuste o espaçamento conforme necessário */
+        }
+
+        .search-button {
+            background-color: #28a745; /* Adicionada para verde */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #004497;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left-image,
+        .right-image {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .left-image {
+            left: 15px;
+        }
+
+        .right-image {
+            right: 15px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Adicionado para conter as imagens */
+        }
+
+        .friend {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .friend img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .friend-info {
+            flex-grow: 1;
+        }
+
+        .friend h3 {
+            margin: 0;
+        }
+
+        .friend p {
+            margin: 5px 0 0;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="lula.png" alt="Left Image" class="left-image">
+        <h1>AMIGOS</h1>
+        <img src="fortnite.png" alt="Right Image" class="right-image">
+        <button class="settings-button" onclick="goToSettings()">Configurações</button>
+        <button class="search-button" onclick="goToSearch()">Pesquisar</button>
+    </header>
+
+    <main>
+        <section class="secao-1">
+            <div class="friend">
+                <img src="marsh.png" alt="Rafael Peruci">
+                <div class="friend-info">
+                    <h3>Rafael Peruci</h3>
+                    <p>Online - Jogando Minecraft</p>
+                    <button onclick="openChat(1)">Chat</button>
+                </div>
+            </div>
+
+            <div class="friend">
+                <img src="skrek.png" alt="Goiti Ueno">
+                <div class="friend-info">
+                    <h3>Goiti Ueno</h3>
+                    <p>Offline</p>
+                    <button onclick="openChat(2)">Chat</button>
+                </div>
+            </div>
+
+            <div class="friend">
+                <img src="homi.png" alt="Cabeludo">
+                <div class="friend-info">
+                    <h3>Cabeludo</h3>
+                    <p>Online - Assistindo a um filme</p>
+                    <button onclick="openChat(3)">Chat</button>
+                </div>
+            </div>
+
+            <div class="friend">
+                <img src="gay.png" alt="Iago Falavinha">
+                <div class="friend-info">
+                    <h3>Iago Falavinha</h3>
+                    <p>Online - Jogando Genshin Impact</p>
+                    <button onclick="openChat(4)">Chat</button>
+                </div>
+            </div>
+
+            <div class="friend">
+                <img src="mcqueen.png" alt="Julio Cesar">
+                <div class="friend-info">
+                    <h3>Julio Cesar</h3>
+                    <p>Offline</p>
+                    <button onclick="openChat(5)">Chat</button>
+                </div>
+            </div>
+
+            <div class="friend">
+                <img src="biscoite.png" alt="Pedro Jose">
+                <div class="friend-info">
+                    <h3>Pedro Jose</h3>
+                    <p>Online - Jogando Fortnite</p>
+                    <button onclick="openChat(6)">Chat</button>
+                </div>
+            </div>
+            <!-- Adicione mais amigos conforme necessário -->
+        </section>
+    </main>
+
+    <script>
+        function goToSettings() {
+            // Adicione aqui o redirecionamento para a página de configurações
+            alert('Redirecionar para Configurações');
+            window.location.href = 'configuraçoes.html';
+        }
+
+        function goToSearch() {
+            // Adicione aqui o redirecionamento para a página de pesquisa
+            alert('Redirecionar para Pesquisar');
+            window.location.href = 'indexxx.html';
+        }
+
+        // Simulação de dados de usuários e mensagens
+        const users = [
+            { id: 1, name: 'Rafael Peruci' },
+            { id: 2, name: 'Goiti Ueno' },
+            { id: 3, name: 'Cabeludo' },
+            { id: 4, name: 'Iago Falavinha' },
+            { id: 5, name: 'Julio Cesar' },
+            { id: 6, name: 'Pedro Jose' },
+        ];
+
+        const messages = [
+            { sender: 1, receiver: 1, text: 'Oi, David! Tudo bem?' },
+            { sender: 2, receiver: 2, text: 'Oi, David! Tudo tranquilo?' },
+            { sender: 3, receiver: 3, text: 'E aí, David? Vamos assistir a um filme hoje?' },
+            { sender: 4, receiver: 4, text: 'Salve, David! Genshin Impact mais tarde?' },
+            { sender: 5, receiver: 5, text: 'E aí, Dvd? Tudo bem?' },
+            { sender: 6, receiver: 6, text: 'DVD, bora jogar Fortnite?' },
+        ];
+
+        function openChat(userId) {
+            const user = users.find((u) => u.id === userId);
+            const chatMessages = getNewMessages(userId);
+
+            // Simulação simples: Exibe as mensagens em um alerta
+            alert(`Chat com ${user.name}:\n\n${chatMessages.map(msg => `${users.find(u => u.id === msg.sender).name}: ${msg.text}`).join('\n')}`);
+        }
+
+        function getNewMessages(userId) {
+            // Simulação simples: Obtém as mensagens não lidas para o usuário atual
+            return messages.filter((message) => message.receiver === userId);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .left-image,
+        .right-image {
+            width: 500px;
+            height: 500px;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .left-image {
+            left: 15px;
+        }
+
+        .right-image {
+            right: 15px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Adicionado para conter as imagens */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #004497; /* Alterada para azul escuro */
+            color: white; /* Adicionada para o texto ser branco */
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-buttons button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #28a745; /* Adicionada para verde */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* Alterada para branco */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .config-option {
+            margin-bottom: 15px;
+        }
+
+        .config-option label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #004497; /* Adicionada para azul escuro */
+        }
+
+        .config-option input[type="checkbox"],
+        .config-option input[type="range"],
+        .config-option select {
+            background-color: #f2f2f2; /* Alterada para cinza claro */
+            color: #004497; /* Adicionada para azul escuro */
+        }
+
+        .config-option input[type="checkbox"]:checked {
+            background-color: #007bff; /* Alterada para azul */
+            color: white; /* Adicionada para o texto ser branco */
+        }
+
+        .config-option input[type="range"] {
+            width: 100%; /* Adicionada para ocupar a largura total */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="saitama.png" alt="Left Image" class="left-image">
+        <img src="dark.png" alt="Right Image" class="right-image">
+        <div class="header-buttons">
+            <h1>Configurações</h1>
+            <button onclick="goToFriendsPage()">Amigos</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="config-option">
+                <label for="notificacoes">Receber notificações:</label>
+                <input type="checkbox" id="notificacoes" name="notificacoes" checked>
+            </div>
+
+            <div class="config-option">
+                <label for="idioma">Idioma:</label>
+                <select id="idioma" name="idioma">
+                    <option value="portugues">Português</option>
+                    <option value="ingles">Inglês</option>
+                    <option value="espanhol">Espanhol</option>
+                </select>
+            </div>
+
+            <div class="config-option">
+                <label for="tema">Tema:</label>
+                <select id="tema" name="tema">
+                    <option value="claro">Claro</option>
+                    <option value="escuro">Escuro</option>
+                </select>
+            </div>
+
+            <div class="config-option">
+                <label for="tamanho-fonte">Tamanho da Fonte:</label>
+                <input type="range" id="tamanho-fonte" name="tamanho-fonte" min="12" max="24" step="2" value="16">
+            </div>
+
+            <div class="config-option">
+                <label for="notificacoes-sonoras">Notificações Sonoras:</label>
+                <input type="checkbox" id="notificacoes-sonoras" name="notificacoes-sonoras" checked>
+            </div>
+
+            <div class="config-option">
+                <label for="modo-noturno">Modo Noturno:</label>
+                <input type="checkbox" id="modo-noturno" name="modo-noturno">
+            </div>
+
+            <div class="config-option">
+                <label for="modo-leitura">Modo Leitura:</label>
+                <input type="checkbox" id="modo-leitura" name="modo-leitura">
+            </div>
+
+            <!-- Adicione mais opções conforme necessário -->
+        </section>
+    </main>
+
+    <script>
+        // Simulação de funcionalidade das configurações usando JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            // Restaurar configurações salvas (simulação)
+            restoreSavedSettings();
+        });
+
+        function restoreSavedSettings() {
+            // Simulação: obter configurações salvas do armazenamento local
+            const savedSettings = {
+                notificacoes: true,
+                idioma: 'portugues',
+                tema: 'claro',
+                'tamanho-fonte': 16,
+                'notificacoes-sonoras': true,
+                'modo-noturno': false,
+                'modo-leitura': false,
+            };
+
+            // Aplicar configurações salvas aos elementos da página
+            for (const key in savedSettings) {
+                const input = document.getElementById(key);
+                if (input) {
+                    if (input.type === 'checkbox') {
+                        input.checked = savedSettings[key];
+                    } else {
+                        input.value = savedSettings[key];
+                    }
+                }
+            }
+        }
+
+        function saveSettings() {
+            // Coletar as configurações do usuário do DOM
+            const notificacoes = document.getElementById('notificacoes').checked;
+            const idioma = document.getElementById('idioma').value;
+            const tema = document.getElementById('tema').value;
+            const tamanhoFonte = document.getElementById('tamanho-fonte').value;
+            const notificacoesSonoras = document.getElementById('notificacoes-sonoras').checked;
+            const modoNoturno = document.getElementById('modo-noturno').checked;
+            const modoLeitura = document.getElementById('modo-leitura').checked;
+
+            // Salvar as configurações no localStorage
+            const settings = {
+                notificacoes,
+                idioma,
+                tema,
+                'tamanho-fonte': tamanhoFonte,
+                'notificacoes-sonoras': notificacoesSonoras,
+                'modo-noturno': modoNoturno,
+                'modo-leitura': modoLeitura,
+            };
+
+            // Salvar as configurações no localStorage
+            localStorage.setItem('userSettings', JSON.stringify(settings));
+
+            // Exibir as configurações salvas (simulação)
+            console.log('Configurações salvas:', settings);
+        }
+
+        function goToFriendsPage() {
+            // Redirecionar para a página de amigos (substitua a URL pela sua)
+            window.location.href = 'amigos.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Restaurar as configurações salvas do localStorage
+            const savedSettingsJSON = localStorage.getItem('userSettings');
+            if (savedSettingsJSON) {
+                const savedSettings = JSON.parse(savedSettingsJSON);
+
+                // Aplicar as configurações aos elementos do DOM
+                for (const key in savedSettings) {
+                    const input = document.getElementById(key);
+                    if (input) {
+                        if (input.type === 'checkbox') {
+                            input.checked = savedSettings[key];
+                        } else {
+                            input.value = savedSettings[key];
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

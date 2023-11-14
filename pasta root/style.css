@@ -1,0 +1,91 @@
+body {
+    background-color: #232ec5;
+}
+
+.header {
+    padding: 15px;
+}
+
+.links {
+    display: inline;
+    margin-left: 1300px;
+}
+
+.links a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 2px;
+}
+
+.links a:hover {
+    color: #2e10c4;
+    border-top: 2px solid #2e10c4;
+    border-bottom: 2px solid #2e10c4;
+}
+
+.span-1,
+.span-2 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.span-1 {
+    color: #000000;
+}
+
+.span-2 {
+    color: #2e10c4;
+}
+
+.secao-1 {
+    text-align: center;
+    color: #33beff;
+}
+
+.Registro-1 form {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+label {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+input,
+select {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+}
+
+button {
+    background-color: #000000;
+    color: rgb(228, 228, 228);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Adiciona espaçamento superior para o botão Login */
+}
+
+button:hover {
+    background-color: #00e5ff;
+}
+
+select {
+    width: 100%;
+}
+
+/* Adicionando estilo para posicionar o botão de login abaixo do botão Bem-vindo */
+.Registro-1 .btn-registre {
+    margin-top: 10px;
+    margin-right: 200px; /* Adiciona espaçamento à direita para o botão Registre */
+    text-align: center;
+}

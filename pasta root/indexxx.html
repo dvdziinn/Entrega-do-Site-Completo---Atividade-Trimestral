@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVI REGISTER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Z6nCDeuAbluOdRYvKQ7h5Mcl/21rOTY+3LkHA1e3f4JggT1cf6tQ5lmgUiT7myOleWZ9Iesqhm8yLXPB4CMEWg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-button,
+        .friends-link,
+        .settings-link {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .friends-link,
+        .settings-link {
+            margin-left: 10px;
+        }
+
+        .friends-icon {
+            margin-right: 5px;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .corner-image-right,
+        .corner-image-left {
+            max-width: 800px;
+            position: absolute;
+            bottom: -600px;
+        }
+
+        .corner-image-right {
+            right: 59px;
+        }
+
+        .corner-image-left {
+            left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-info header">
+        <section class="logo">
+            <span>LI</span>
+            <span>VI</span>
+        </section>
+        <section class="links">
+            <a href="">Home</a>
+            <a href=""></a>
+            <a href="https://www.instagram.com/david_dsvm/" target="_blank">Rede Sociais</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="configuraçoes.html" class="settings-link">
+                <i class="fa-solid fa-cog"></i> Configurações
+            </a>
+        </section>
+    </header>
+
+    <main>
+        <section class="secao-1">
+            <h3></h3>
+            <h1></h1>
+            <h1>Bem-vindo ao LIVI</h1>
+            <p></p>
+
+            <!-- Barra de pesquisa estilizada -->
+            <form action="https://www.google.com/search" method="GET" target="_blank" class="search-form">
+                <input type="text" id="search" name="q" placeholder="Pesquisar no Google" class="search-input" required>
+                <button type="submit" class="search-button">Pesquisar</button>
+            </form>
+
+            <!-- Link para a página de amigos com ícone -->
+            <a href="amigos.html" class="friends-link">
+                <i class="fa-solid fa-user-group friends-icon"></i> Amigos
+            </a>
+        </section>
+    </main>
+
+    <!-- Adicionando a imagem à direita -->
+    <img src="muie.png" alt="Imagem à direita" class="corner-image-right">
+
+    <!-- Adicionando a imagem à esquerda -->
+    <img src="robo.png" alt="Imagem à esquerda" class="corner-image-left">
+</body>
+
+</html>

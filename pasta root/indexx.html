@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVI LOGIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            position: relative;
+        }
+
+        .corner-image-right {
+            position: absolute;
+            bottom: 500px;
+            right: 200px;
+            max-width: 1200px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        .corner-image-left {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            max-width: 600px; /* Ajuste o tamanho conforme necessário */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-info header">
+        <section>
+            <span class="span-1">LI</span>
+            <span class="span-2">VI</span>
+            <section class="links">
+                <a href="index.html">Home</a>
+                <a href=""></a>
+                <a href="https://www.instagram.com/david_dsvm/" target="_blank">Rede Sociais</a>
+                <a href="sobre.html">Sobre</a>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <section class="secao-1">
+            <h3></h3>
+            <h1></h1>
+            <h1>FAÇA SEU LOGIN PARA CONTINUAR</h1>
+        </section>
+    </main>
+    
+
+    <section class="Registro-1">
+        <form>
+            <label for="email">Digite seu e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail aqui" required>
+
+            <label for="senha">Digite sua senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Sua senha aqui" required>
+
+            <button type="button" onclick="redirecionarParaBemVindo()">Bem-vindo</button>
+            <button type="button" onclick="redirecionarParaRegistro()">Registre</button>
+        </form>
+    </section>
+
+    <!-- Adicionando a imagem à direita -->
+    <img src="mago.png" alt="Imagem à direita" class="corner-image-right">
+
+    <!-- Adicionando a imagem à esquerda -->
+    <img src="draco.png" alt="Imagem à esquerda" class="corner-image-left">
+
+    <script>
+        function redirecionarParaBemVindo() {
+            window.location.href = 'indexxx.html';
+        }
+
+        function redirecionarParaRegistro() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>
